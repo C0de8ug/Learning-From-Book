@@ -1,0 +1,8 @@
+<html>
+<body>
+	
+</body>
+<script>
+	alert(undefine == null);
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function test(num){
+        if(num > 10)
+            return;
+        test(++num);
+    }
+
+    var anotherFunction = test;
+    test = null;
+    anotherFunction(4)
+</script>
+</html>

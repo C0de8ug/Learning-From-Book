@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<property>
+		<name>redis.useraccount</name>
+		<value>codebug</value>
+	</property>
+	<property>
+		<name>redis.password</name>
+		<value>123456</value>
+	</property>
+</configuration>

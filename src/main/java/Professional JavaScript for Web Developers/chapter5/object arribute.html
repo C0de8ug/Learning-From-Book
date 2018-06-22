@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var person = {
+        name : "HaHa",
+        age : 22
+    };
+    Object.defineProperty(person,"name",{
+        writable:false
+    });
+    Object.defineProperty(person,"age",{
+        writable:false
+    });
+
+    person.name = "1";
+    person.age = 2;
+
+</script>
+</html>

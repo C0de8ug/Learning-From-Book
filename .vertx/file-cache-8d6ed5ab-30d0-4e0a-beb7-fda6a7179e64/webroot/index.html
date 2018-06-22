@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>My WebSocket</title>
+
+</head>
+
+<body>
+<input id="text" type="text"/>
+<button onclick="send()">Send</button>
+<button onclick="closeSocket()">Close</button>
+</body>
+
+<script src="sockjs.min.js"></script>
+<script src='vertx-eventbus.js'></script>
+
+<script>
+    var eb = new EventBus('/eventbus/');
+
+    eb.onopen = function () {
+
+        // set a handler to receive a message
+        eb.registerHandler('s2c', function (error, message) {
+            console.log('received a message: ' + JSON.stringify(message));
+        });
+    }
+
+</script>
+<script>
+    function send() {
+        eb.send('c2s', 'hello world!');
+    }
+    function closeSocket() {
+
+    }
+</script>
+</html>
